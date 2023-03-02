@@ -2,7 +2,7 @@
 
 This repository cross compiles Polarfire sdk using Nix.
 
-To build SDK run:
+To build SDK run the following command:
 
 ```
 > nix-build
