@@ -1,4 +1,6 @@
 with import <nixpkgs> {};
 rec {
-  hss = callPackage ./hss { };
+  hss = import ./hss;
+  tools = callPackage ./tools.nix { };
 }
+

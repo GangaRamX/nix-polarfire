@@ -1,10 +1,4 @@
-{
-  lib,
-  stdenv,
-  buildPackages,
-  fetchFromGitHub
-}:
-
+with (import <nixpkgs> {});
 stdenv.mkDerivation rec {
   pname = "hss";
   version = "v2022.09";
@@ -31,7 +25,6 @@ stdenv.mkDerivation rec {
     runHook postPatch
   '';
 
-
   buildPhase = ''
     runHook preBuild
 
@@ -48,10 +41,5 @@ stdenv.mkDerivation rec {
 
     runHook postConfigure
   '';
-
-
 }
-
-
-
 

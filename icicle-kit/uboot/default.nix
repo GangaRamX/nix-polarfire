@@ -5,10 +5,13 @@
 , buildPackages
 , defconfig
 }:
-
+let 
+  name = "uboot";
+  ver = "linux4microchip-2023.02";
+in
 stdenv.mkDerivation rec {
-  pname = "uboot";
-  version = "linux4microchip+fpga-2023.02";
+  pname = name;
+  version = ver;
 
   src = fetchFromGitHub {
     owner = "polarfire-soc";
@@ -26,7 +29,6 @@ stdenv.mkDerivation rec {
     flex
     openssl
     which
-    #bc # XXX ?
   ];
 
   makeFlags = [
